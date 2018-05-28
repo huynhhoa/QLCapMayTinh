@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using QLCapMayTinh.Class;
 
 namespace QLCapMayTinh
 {
@@ -36,7 +36,7 @@ namespace QLCapMayTinh
         {
             DataTable tb = new DataTable();
             //truyền câu lệnh SQL vào hàm ThucHienReader để load dữ liệu
-            tb.Load(conn.ThucHienReader("SELECT * FROM Admin WHERE TenDangNhap='" + txtUN.Text.Trim() + "'"));
+     //       tb.Load(conn.ThucHienReader("SELECT * FROM Admin WHERE TenDangNhap='" + txtUN.Text.Trim() + "'"));
             if (tb.Rows.Count == 0)
             {
                 MessageBox.Show("Không tồn tại tên đăng nhập này. Bạn hãy liên hệ với admin để tạo tài khoản.", "Thông Báo");
